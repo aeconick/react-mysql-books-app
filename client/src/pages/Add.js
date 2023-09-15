@@ -54,7 +54,9 @@ const Add = () => {
         onChange={handleChange}
         name="cover"
       ></input>
-      <button onClick={handleClick}></button>
+      <button className="form-button" onClick={handleClick}>
+        Add
+      </button>
     </div>
   );
 };

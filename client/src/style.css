@@ -1,5 +1,5 @@
 .App {
-  padding: 60px 100px;
+  padding: 20px 100px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -27,19 +27,50 @@ img {
 }
 
 .delete {
-    border: none;
-    padding: 3px 6px;
-    background-color: white;
-    cursor: pointer;
-    border: 1px solid rgb(245, 191, 191);
-    color: rgb(242, 100, 100);
+  border: none;
+  padding: 3px 6px;
+  background-color: white;
+  cursor: pointer;
+  border: 1px solid rgb(245, 191, 191);
+  color: rgb(242, 100, 100);
 }
 
 .update {
+  border: none;
+  padding: 3px 6px;
+  background-color: white;
+  cursor: pointer;
+  border: 1px solid rgb(204, 204, 243);
+  color: rgb(139, 139, 243);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+input {
+  width: 250px;
+  padding: 10px;
+  border: 1px solid grey;
+}
+
+.form-button {
+  border: none;
+  padding: 10px;
+  background-color: rgb(244, 142, 74);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.add-new-book {
+    margin-top: 20px;
     border: none;
     padding: 3px 6px;
     background-color: white;
     cursor: pointer;
-    border: 1px solid rgb(204, 204, 243);
-    color: rgb(139, 139, 243);
+    border: 1px solid rgb(66, 66, 80);
+    color: rgb(243, 139, 201);
 }

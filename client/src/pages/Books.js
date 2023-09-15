@@ -1,9 +1,40 @@
-import React from 'react'
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import { Link } from "react-router-dom";
 
 const Books = () => {
-  return (
-    <div>Books</div>
-  )
-}
+  const [books, setBooks] = useState([]);
 
-export default Books
+  useEffect(() => {
+    const fetchBooks = async () => {
+      try {
+        const res = await axios.get("http://localhost:8800/books");
+        setBooks(res.data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchBooks();
+  }, []);
+
+  return (
+    <div>
+      <h1>Nikolay's Book Shop</h1>
+      <div className="books">
+        {books.map((book) => (
+          <div className="book" key={book.id}>
+            {book.cover && <img src={book.cover} alt="Book Cover"></img>}
+            <h2>{book.title}</h2>
+            <p>{book.description}</p>
+            <span>{book.price}</span>
+          </div>
+        ))}
+      </div>
+      <button>
+        <Link to="/add">Add new book</Link>
+      </button>
+    </div>
+  );
+};
+
+export default Books;
